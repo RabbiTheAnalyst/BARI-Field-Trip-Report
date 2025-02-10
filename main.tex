@@ -1,0 +1,677 @@
+\documentclass[oneside,12pt,fleqn]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{tabularx} 
+\usepackage{booktabs}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\geometry{margin=1in}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage{lipsum} % For dummy text (remove this in the final version)
+
+% Define the footer style with a colored box
+\fancypagestyle{mypagestyle}{
+    \fancyhf{}
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot[C]{
+        \begin{tcolorbox}[
+            colframe=blue!70!black, % Border color
+            colback=blue!10!white, % Background color
+            boxrule=0.5mm, % Thickness of the border
+            width=\textwidth, % Full width of the page
+            sharp corners
+        ]
+        \centering
+        \textit{STAT-4109 Field Trip \hspace{1cm} \thepage \hspace{1cm} Md Rabbi Ali (2017-18)}
+        \end{tcolorbox}
+    }
+}
+% Apply the custom style to all pages
+\pagestyle{mypagestyle}
+
+
+%%%%%%%%%%%
+\begin{document}
+
+% Title Page
+% Title Page
+\makeatletter
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+       { \includegraphics[width=6cm]{both.png}}\\[1cm]
+
+    {\LARGE \textbf{A Field Trip Report On BARI}}\\[1cm]
+    Presented\\[1cm]
+    
+    To the Department Of Statistics, Islamic University\\
+   Kushtia -7003 , Bangladesh\\[0.5cm]
+    
+    In Partial Fulfillment of the Requirements\\
+    for Departmental Report  \\[0.3cm]
+    
+    Statistics\\[1.0cm]
+    \textbf{Submitted By:}{ }\\[0.5cm]
+    Md. Rabbi Ali\\
+    Roll: 212255\\
+    Reg: 1586\\
+    Session: 2021-2022\\
+    \date{\large Date Last Edited: \today}
+    {\@date\\}
+\end{titlepage}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% Acknowledgments
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\textit{All praise goes to Allah, the Most Merciful, the Most Compassionate. Allah, by His Kindness and help , has made the completion of the trip safe and sound.I am deeply grateful to the Department of Statistics, Islamic University, for organizing this enriching field trip to the Bangladesh Agricultural Research Institute (BARI). My sincere thanks to our honorable teachers and mentors, specially  Dr. Mahbubur Rahman , Dr. Sazzad Hossen , Dr. Md. Sohel Rana and Suman Biswas whose guidance and support made this visit possible and highly educational.I extend my heartfelt gratitude to the trainers and researchers at BARI for their time, effort, and valuable insights. Their detailed explanations of various agricultural innovations, methodologies, and designs, such as the Randomized Block Design and Split Plot Design, significantly enhanced my understanding of practical applications in agriculture. Special thanks go to the organizers and staff at BARI for their hospitality and well-structured sessions, which included field visits, lab demonstrations, and interactive discussions. Their dedication to advancing agricultural research is truly commendable.
+Finally, I would like to thank my fellow classmates for their cooperation and enthusiasm throughout the trip. The collective experience has been a memorable and transformative learning journey.}
+\section*{Md. Rabbi Ali}
+Department of Statistics, Islamic University, Kushtia
+
+
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\subsection*{\textit{A field Trip On Banngladesh Agriculture Research Institute..}}
+\textit{We the students of M.Sc first Semester from department of statistics , Islamic University had gone to a field trip . Our targeted place were Bangladesh Agriculture  Research Institute (BARI), Gazipur. The primary objective of the visit was to gain practical knowledge about modern agricultural research techniques and their statistical underpinnings. The trip included interactive sessions with experts, lab demonstrations, and field visits to observe innovations in crop production, pest management, and sustainable agriculture. Particular emphasis was placed on understanding the applications of statistical designs, including the Randomized Complete Block Design and Split Plot Design, in agricultural experiments.
+Through this visit, significant insights were gained into the role of statistical tools in enhancing agricultural productivity and research. The experience bridged the gap between theoretical knowledge and real-world applications, providing a holistic perspective on the integration of statistics in agriculture.\\}
+\textbf{Keywords: }Statistics, vision, mission.
+
+% Introduction
+\chapter{Introduction}
+\textbf {A field trip} is an educational activity where participants leave their usual environment (such as a classroom, lab, or office) to visit a specific location to gain hands-on experience or practical knowledge about a particular subject. It is often used to connect theoretical learning with real-world applications.\\
+\textbf{Purpose} of the field Trip To enhance learning by providing practical exposure to concepts studied in books or lectures.To observe real-life applications, techniques, or processes.\\
+The Bangladesh Agricultural Research Institute (BARI) is one of the leading institutions in the country dedicated to agricultural research, innovation, and sustainable farming practices. The Department of Statistics at Islamic University organized a field trip to BARI to provide students with firsthand exposure to the application of statistical methods in agriculture. This visit aimed to explore the various agricultural innovations, research methodologies, and statistical designs that play a crucial role in improving agricultural practices in Bangladesh.
+The purpose of this field trip was to bridge the gap between theoretical knowledge and practical implementation of statistical techniques in agricultural research. Students had the opportunity to observe and engage in discussions on advanced research methods, experimental designs, and data analysis techniques employed in BARI’s research programs. Through direct interaction with BARI’s researchers and trainers, students gained insights into the importance of statistical tools such as the Randomized Complete Block Design (RCBD) and Split Plot Design (SPD), which are commonly used in agricultural experiments.
+This report outlines the key activities, observations, and insights gained during the visit to BARI. It also highlights the significance of applying statistical methods in agriculture and their contribution to sustainable food production and rural development in Bangladesh.
+
+\section{Motivation}
+As a student of statistics with an interest in applying my knowledge to real-world problems, the opportunity to visit BARI was highly motivating. Agriculture is the backbone of Bangladesh’s economy, and understanding how statistical techniques are applied in this field is crucial for my academic and professional growth. This field trip allowed me to see firsthand how statistical methods can be used to solve critical issues such as improving crop yields, managing pests, and ensuring sustainable farming practices.
+The field trip also highlighted the significant role of data analysis in optimizing agricultural processes, making it directly relevant to my aspirations of becoming a Junior Data Analyst. By learning about the statistical designs used at BARI, I am more motivated to pursue a career where I can use data analytics to support research and development in sectors like agriculture, which are vital for the development of my country.
+\section{Transport}
+We hired 1 bus from campus. The bus were in good size. There were enough spaces for all us. The driver was ectremly patient and friendly
+% Objectives of the Visit
+\section{Objectives of the Visit}
+The primary objectives of the visit were:
+\begin{itemize}
+    \item To explore BARI’s research activities and innovations.
+    \item To understand the application of statistical designs in agriculture.
+    \item To gain insights into real-world agricultural techniques.
+\end{itemize}
+
+% Overview of BARI
+\chapter{Overview of BARI}
+\section{History}
+Bangladesh Agricultural Research Institute traces its origins to Dhaka farm which was established in 1908. Bangladesh Agricultural Research Institute was established in 1976 as an autonomous research institute. The research compound of the central station is spread over 176 hectares of land of which 126 hectares are experiment fields. The institute has established six regional research stations in six regions of Bangladesh to develop new technologies. These research stations are located at Ishwardi, Jamalpur, Jessore, Hathazari, Rahmatpur, and Akbarpur. It also has 28 research stations including three hill research stations (Khagrachari, Ramgarh and Raikhali). Besides these, BARI has seven crop research centers, four of which are at the central research station in Joydebpur.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Bari.jpg} % Adjust the width to control size
+    \caption{Bangladesh Agricultural Research Institute}
+    \label{fig:sample} % Label for referencing
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mission and Vision}
+\subsection{Mission}
+\begin{itemize}
+    \item Development of high-yielding, nutritious and tolerant varieties of crops.
+    \item Development of advanced, modern and sustainable production technology based on crops and determination of appropriate cropping patterns.
+    \item Development of eco-friendly crop preservation technology.
+    \item Conservation and improvement of soil health.
+    \item Accelerating agricultural mechanization through innovation and development of suitable agricultural machinery.
+    \item Develop suitable technologies to minimize post-harvest losses.
+    \item Socio-economic development of the country through the transfer of invented breeds and technologies.
+    \item Survey of crop market management.
+\end{itemize}
+\subsection{Vision}
+Increasing production and productivity of crops under Bangladesh Agricultural Research Institute.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Organogram of BARI}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{barri.png} % Adjust the width to control size
+    \caption{ORGANOGRAM     of Bangladesh Agriculture Research Institute}
+    \label{fig:sample} % Label for referencing
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Areas}
+BARI conducts a wide range of research activities aimed at improving agricultural productivity and sustainability. The institute’s research areas are diverse, reflecting the varied challenges faced by Bangladesh's agricultural sector. Below are the key research areas at BARI. Highlights include high-yield crop varieties, advanced irrigation techniques, and pest-resistant plants.
+
+\textbf{Crops Research centre}
+\begin{itemize}
+    \item Tuber Crops Research Centre
+    \item Wheat Research Centre
+    \item Horticultural Research Centre
+    \item Pulse Research Centre
+    \item Oil Crops Research Centre
+    \item Spice Research Centre
+    \item Regional Horticulture Research Centre, Shibpur, Norshingdi
+    \item  Regional Horticulture Research Centre, Chapainawabgonj
+    \item  Regional Horticulture Research Centre, Lebukhali, Dumki, Patuakhali
+    \item Citrus Research Centre, Jaintiapur, Sylhet
+    \item Fruit Research Station, Binodpur, Rajshahi
+\end{itemize}
+
+% Techniques and Labs
+\section{Techniques and Labs}
+BARI employs a variety of advanced techniques and state-of-the-art laboratories to conduct its agricultural research. These facilities are designed to support the development of innovative agricultural technologies and to address the challenges faced by farmers in Bangladesh. Below are some of the key techniques and laboratories used at BARI.
+\subsection{Integration of IoT in Modern Agriculture}
+"The Internet of Things (IoT) is transforming traditional agriculture into precision farming by enabling real-time data collection, monitoring, and analysis. IoT involves interconnected devices such as sensors, drones, and automated systems that communicate and share data over the internet. This technology empowers farmers to make informed decisions, optimize resource use, and increase productivity."
+
+
+\subsection{Agricultural Research Laboratories}
+BARI is equipped with numerous specialized research laboratories that focus on different aspects of agricultural science. These labs are used for breeding experiments, genetic research, soil analysis, and plant pathology studies.
+\subsection{Greenhouse and Controlled Environment Systems}
+Greenhouses at BARI provide a controlled environment for plant growth, which allows researchers to conduct experiments on crop breeding and management under varying conditions. These controlled systems help in studying plant responses to temperature, humidity, and light conditions, and play a vital role in developing climate-resilient crop varieties.
+\subsection{Field Research Stations}
+BARI operates several field research stations across the country where crop trials and experiments are conducted in real agricultural conditions. These stations allow researchers to test new technologies, crop varieties, and pest control methods in diverse agro-climatic zones. Field visits provide valuable insights into how different crops perform in various environmental conditions.
+\subsection{Water and Irrigation Management Systems}
+Research in water resource management at BARI involves techniques such as drip irrigation, rainwater harvesting, and water-use efficiency analysis. The labs and field stations focus on developing cost-effective irrigation technologies that minimize water waste and improve crop yields
+% What we learned in BARI
+\chapter{What we learned at BARI}
+Our field trip to the Bangladesh Agricultural Research Institute (BARI) was an eye-opening experience that provided valuable insights into the application of agricultural research and statistics in real-world settings. During the visit, we learned about various aspects of agricultural research, experimental design, and sustainable farming practices that are crucial for improving food security and agricultural productivity in Bangladesh
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Right To Information Act, 2009}
+ The Act was notified in the Bangladesh Gazette on Monday, 6 April, 2009. It received the President’s assent on 5 April 2009. The Act makes provisions for ensuring free flow of information and people’s right to information.
+ The freedom of thought, conscience and speech is recognised in the Constitution as a fundamental right and the right to information is an alienable part of it. Since all powers of the Republic belong to the people, it is necessary to ensure right to information for their empowerment. The right to
+ information shall ensure that transparency and accountability in all public,autonomous and statutory organisations and in private organisations run
+ on government or foreign funding shall increase, corruption shall decrease and good governance shall be established. It is expedient and necessary to make provisions for ensuring transparency and accountability.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integration of Remote Sensing and GIS}
+Combining remote sensing with GIS enhances decision-making by providing accurate, real-time data for spatial analysis. For example:
+\begin{itemize}
+    \item Satellite images from remote sensing are integrated into GIS to create detailed land-use maps.
+    \item Disaster management teams use both technologies for better risk prediction and response.\\
+\end{itemize}
+\subsection*{Examples of Integration:}
+\begin{itemize}
+    \item \textbf{Agricultural Monitoring: }Using satellite images in GIS for crop yield analysis.
+    \item \textbf{Flood Mapping:}Analyzing flood-prone areas using GIS layered with remote sensing data.
+    \item \textbf{Urban Growth Analysis:}Detecting urban sprawl over time through satellite images in GIS.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Remote.png} % Adjust the width to control size
+    \caption{Remote Sensing and GIS}
+    \label{fig:sample} % Label for referencing
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistical Methods in Agriculture}
+One of the key learning points was the importance of statistical designs in agricultural experiments. We learned about the Randomized Complete Block Design (RCBD) and Split Plot Design (SPD), which are widely used in BARI’s research. These statistical methods help ensure the validity and reliability of the research findings by minimizing the effects of uncontrolled variables, such as environmental factors, on experimental results. Understanding these designs gave us a deeper appreciation for how statistics plays a critical role in optimizing agricultural practices and improving crop yields.
+\section{Randomized Complete Block Design (RCBD)}
+\subsection{Understanding the RCBD Structure}
+The Randomized Complete Block Design involves grouping experimental units (such as plots of land) into blocks that are as homogeneous as possible. Each block represents a set of experimental units that are similar in characteristics, such as soil type, light exposure, or water availability. Within each block, all treatments (e.g., different crop varieties, fertilizer levels, or irrigation techniques) are randomly assigned to experimental units. The randomization helps eliminate biases and ensures that the treatment effects are not influenced by confounding variables
+\subsection{Purpose and Benefits of RCBD}
+RCBD is particularly useful in agricultural research because it accounts for block-to-block variability, which is often seen in field trials due to differences in soil fertility, topography, and other environmental factors. By controlling for this variability, RCBD provides more accurate estimates of treatment effects. The randomization process minimizes the risk of systematic errors, ensuring that the results of the experiment reflect the true impact of the treatments, rather than the influence of external factors.
+\subsection{Application of RCBD in Field Trials}
+We saw firsthand how RCBD is applied in agricultural field trials at BARI. Researchers use RCBD to test different crop varieties, fertilization practices treatments. By dividing the field into blocks, they ensure that each treatment is tested under similar environmental conditions, which improves the reliability and validity of the results. This design also allows for efficient use of resources, as each block is treated as a mini-experiment, making it easier to detect the effects of each treatment
+
+
+\section{Split Plot Design}
+\subsection{Understanding the Split Plot Design Structure}
+The Split Plot Design involves dividing the experimental field into two types of plots: main plots and subplots. The main plots are assigned one treatment, while the subplots within each main plot receive different treatments. The key distinction in SPD is that the main plots are generally larger, and the treatments assigned to them are considered more significant or applied on a larger scale (e.g., irrigation methods or tillage systems). In contrast, the subplots receive treatments that are applied on a smaller scale, such as varying fertilizer rates or crop varieties.
+\subsection {Why Use Split Plot Design?}
+\textbf{Reason- I:} Particulary for Agronomic experiments,some factors namely \textit{irrigation, Tilage, Drainage, Weed management,} etc.require large experimental units for their covarience of management.\\
+\textbf{Reaso-II:} One more point is noted that, even though the two factors are tested in the experiment but one factor is tested with high precision than other .\\
+\begin{center}
+    (Here,subplots is estimated precisely than the main plot)
+\end{center}
+
+\subsection{Advantages of Split Plot Design}
+The main advantage of SPD is its ability to accommodate multiple factors that affect crop growth, but at different levels. For example, an experiment could test several types of irrigation techniques on the main plots, while experimenting with different fertilizer applications or planting densities on the subplots within each main plot. SPD helps to reduce the experimental error by controlling for variability within each set of treatments. Additionally, this design improves the power of the experiment, allowing for more precise conclusions about the interactions between different agricultural practices.
+
+% Key Insights and Learnings
+\chapter{Methodology}
+\section{Randomized Complete Block Design}
+The randomized complete block design (RCBD) is a standard design for agricultural experiments in which similar experimental units are grouped  into blocks or replicates. It is used to control variation in an experiment by, for example, accounting for spatial effects in field or greenhouse. The 
+defining feature of the RCBD is that each block sees each treatment exactly once.
+\section{RCBD Model}
+
+The following is the RCBD model:
+
+\[
+Y_{ij} = \mu + \tau_i + \beta_j + \varepsilon
+\]
+Where: 
+\begin{itemize}
+    \item \( Y_{ij} \): Any observation for which \( i \) is the treatment factor and \( j \) is the blocking factor.
+    \item \( \mu \): The overall mean.
+    \item \( \tau_i \): The effect for being in treatment \( i \).
+    \item \( \beta_j \): The effect for being in block \( j \).
+    \item \( \varepsilon \): Random error.
+\end{itemize}
+\textbf{Analysis of data: }Data of RCBD with k treatments in r blocks can be displayed as follows 
+\begin{center}
+    \textbf{Data of RCBD}
+\end{center}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Blocks} & \multicolumn{4}{|c|}{\textbf{Treatments}} & \textbf{Block Totals} & \textbf{Block Mean} \\ \hline
+ & \textbf{1} & \textbf{2} & \dots & \textbf{k} & & \\ \hline
+\textbf{1} & y_{11} & y_{12} & \dots & y_{1k} & B_1 & \bar{y}_{1.} \\ \hline
+\textbf{2} & y_{21} & y_{22} & \dots & y_{2k} & B_2 & \bar{y}_{2.} \\ \hline
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ \hline
+\textbf{r} & y_{r1} & y_{r2} & \dots & y_{rk} & B_r & \bar{y}_{r.} \\ \hline
+\textbf{Treatment Total} & T_1 & T_2 & \dots & T_k & G & \\ \hline
+\textbf{Treatment Mean} & \bar{y}_{.1} & \bar{y}_{.2} & \dots & \bar{y}_{.k} & & \\ \hline
+\end{array}
+\]
+Grand Total, \( G \):
+\[
+G = \sum_{i=1}^r \sum_{j=1}^k y_{ij} = \sum_{i=1}^r B_i = \sum_{j=1}^k T_j
+\]
+% Mean of ith block
+\[
+\bar{y}_{i.} = \text{Mean of ith block}
+\]
+% Mean of jth treatment
+\[
+\bar{y}_{.j} = \text{Mean of jth treatment}
+\]
+% Grand Mean
+\[
+\text{Grand Mean, } \bar{y} = \frac{G}{n} = \frac{G}{rk}
+\]
+\begin{equation}
+\text{Total SS} = \sum_{i=1}^{r} \sum_{j=1}^{k} (y_{ij} - \bar{y})^2
+\end{equation}
+
+
+\begin{equation}
+= \sum_{i=1}^{r} \sum_{j=1}^{k} (\bar{y}_{i.} - \bar{y} + (\bar{y}_{.j} - \bar{y}) + (\bar{y}_{ij} - \bar{y}_{i.} - \bar{y}_{.j} + \bar{y}))^2
+\end{equation}
+
+\begin{equation}
+= \sum_{i=1}^{r} \sum_{j=1}^{k} (\bar{y}_{i.} - \bar{y})^2 + \sum_{i=1}^{r} \sum_{j=1}^{k} (\bar{y}_{.j} - \bar{y})^2 + \sum_{i=1}^{r} \sum_{j=1}^{k} (\bar{y}_{ij} - \bar{y}_{i.} - \bar{y}_{.j} + \bar{y})^2 + \text{product terms which vanish}
+\end{equation}
+\begin{equation}
+= \text{Block SS} + \text{Treatment SS} + \text{Error SS}
+\end{equation}
+%ANOVA table for RCBD
+\begin{table}[ht]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+\hline
+\textbf{(S.V.)} & \textbf{(SS)} & \textbf{(df)} & \textbf{(MS)} & \textbf{F-Value} \\ \hline
+Treatments & \( SS_T \) & \( k - 1 \) & \( MS_T = \frac{SS_T}{k - 1} \) & \( F_T = \frac{MS_T}{MS_E} \) \\ \hline
+Blocks & \( SS_B \) & \( r - 1 \) & \( MS_B = \frac{SS_B}{r - 1} \) & - \\ \hline
+Error & \( SS_E \) & \( (r - 1)(k - 1) \) & \( MS_E = \frac{SS_E}{(r - 1)(k - 1)} \) & - \\ \hline
+Total & \( SS_T \) & \( rk - 1 \) & - & - \\ \hline
+ \end{tabularx}
+\caption{ANOVA Table for RCBD}
+\label{tab:anova_rcbd}
+\end{table}
+\section{Assumptions for RCBD Analysis}
+
+1. The observations are randomly selected from a Normal distribution with unknown constant variance \( \sigma^2 \). \\
+2. There is no interaction between blocks and treatments so that blocks and treatments are independent.
+\section*{Hypothesis:}
+$H_0 :$ All treatment means are equal.\\
+$H_1 :$ At least one of them is not equal.
+The test statistics is,
+\[
+F = \frac{MST}{MSE}
+\]
+with \((k-1)\) and \((r-1)(k-1)\) degrees of freedom.
+\subsection*{Comment}
+\(H_0\) is rejected at the \(\alpha\) level of significance if \(F_{cal} \geq F_{\alpha;(k-1),(r-1)(k-1)}\). Otherwise, there is no reason to reject \(H_0\).
+\section{Split Plot Design (SPD)}
+A design in which the plots of a set of treatments are split into several subplots to accommodate a second 
+set of treatments is called a split-plot design. This special type of incomplete blocks design and is frequently 
+used in factorial experiments. Here first set of treatment is called whole plot treatments or main plot 
+treatments represented by factor A and second set of treatments is known as sub plot treatments or split plot 
+treatments represented by factor B. The plots used for whole plot treatments are called whole plots or main 
+plots while subplots are called split lots. \\
+Let,
+\begin{align*}
+y_{ijk} & = \text{Observation in the ith block, jth whole plot treatment, and kth subplot treatments} \\
+\bar{y}_{i..} & = \text{ith block mean} \\
+\bar{y}_{.j.} & = \text{jth whole plot treatment mean} \\
+\bar{y}_{ij.} & = \text{jth whole plot treatment mean in ith block} \\
+\bar{y}_{..k} & = \text{kth subplot treatment mean} \\
+\bar{y}_{.jk} & = \text{(jk)th treatment mean} \\
+\bar{y}_{...} & = \text{Grand Mean}
+\end{align*}
+
+\[
+\text{Total SS} = \sum_{i=1}^{r} \sum_{j=1}^{p} \sum_{k=1}^{q} (y_{ijk} - \bar{y}_{...})^2
+\]
+
+\[
+= \sum_{i=1}^{r} \sum_{j=1}^{p} \sum_{k=1}^{q} \left[ (\bar{y}_{i..} - \bar{y}_{...}) + (\bar{y}_{.j.} - \bar{y}_{...}) + (\bar{y}_{..k} - \bar{y}_{...}) \right.
+\]
+
+
+\[
+\left. + (\bar{y}_{ij.} - \bar{y}_{i..} - \bar{y}_{.j.} + \bar{y}_{...}) + (\bar{y}_{i.k} - \bar{y}_{i..} - \bar{y}_{..k} + \bar{y}_{...}) + (\bar{y}_{.jk} - \bar{y}_{.j.} - \bar{y}_{..k} + \bar{y}_{...}) \right.
+\]
+
+\[
+\left. + (y_{ijk} - \bar{y}_{ij.} - \bar{y}_{i.k} - \bar{y}_{.jk} + \bar{y}_{i..} + \bar{y}_{.j.} + \bar{y}_{..k} - \bar{y}_{...}) \right]^2
+\]
+
+%ANOVA table for Split plot design
+
+
+\begin{table}[h!]
+    \centering
+    \caption{ANOVA Table for Split Plot Design}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+        \hline
+        \textbf{S.V.} & \textbf{df} & \textbf{SS} & \textbf{MS} & \textbf{F} \\
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Whole Plots}} \\
+        \hline
+        Blocks & $r-1$ & $SSB$ & $MSB$ &  \\
+        \hline
+        Treatment A & $p-1$ & $SSA$ & $MSA$ & $\frac{MSA}{MSE(A)}$ \\
+        \hline
+        Error & $(r-1)(p-1)$ & $SSE(A)$ & $MSE(A)$ &  \\
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Split Plots}} \\
+        \hline
+        Treatment B & $q-1$ & $SSB$ & $MSB$ & $\frac{MSB}{MSE(B)}$ \\
+        \hline
+        Interaction AB & $(p-1)(q-1)$ & $SS(AB)$ & $MS(AB)$ & $\frac{MS(AB)}{MSE(B)}$ \\
+        \hline
+        Error & $p(r-1)(q-1)$ & $SSE(B)$ & $MSE(B)$ &  \\
+        \hline
+        Total & $pqr-1$ & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+
+\section*{Hypotheses in Split-Plot Design (SPD)}
+
+\subsection*{Hypothesis 1: Whole Plot Treatment Means}
+\begin{itemize}
+    \item Null Hypothesis ($H_{01}$): All the whole plot treatment means are equal.  
+    \[
+    H_{01}: \mu_1 = \mu_2 = \dots = \mu_p
+    \]
+    \item Alternative Hypothesis ($H_{11}$): At least one of them is unequal.  
+    \[
+    H_{11}: \text{At least one } \mu_i \neq \mu_j \text{ for } i \neq j
+    \]
+    \item Critical Region (CR): 
+    \[
+    F \geq F_{\alpha, (p-1), (r-1)(p-1)}
+    \]
+\end{itemize}
+
+\subsection*{Hypothesis 2: Split Plot Treatment Means}
+\begin{itemize}
+    \item Null Hypothesis ($H_{02}$): All the split plot treatment means are equal.  
+    \[
+    H_{02}: \nu_1 = \nu_2 = \dots = \nu_q
+    \]
+    \item Alternative Hypothesis ($H_{12}$): At least one of them is unequal.  
+    \[
+    H_{12}: \text{At least one } \nu_i \neq \nu_j \text{ for } i \neq j
+    \]
+    \item Critical Region (CR): 
+    \[
+    F \geq F_{\alpha, (q-1), p(r-1)(q-1)}
+    \]
+\end{itemize}
+
+\subsection*{Hypothesis 3: Interaction Between Whole Plot and Split Plot Treatments}
+\begin{itemize}
+    \item Null Hypothesis ($H_{03}$): The interaction between whole plot treatments and split plot treatments is insignificant.  
+    \[
+    H_{03}: \text{No interaction between whole plot and split plot treatments}
+    \]
+    \item Alternative Hypothesis ($H_{13}$): The interaction is significant.  
+    \[
+    H_{13}: \text{There is a significant interaction}
+    \]
+    \item Critical Region (CR): 
+    \[
+    F \geq F_{\alpha, (p-1)(q-1), p(r-1)(q-1)}
+    \]
+\end{itemize}
+
+\chapter{Statistical Analysis}
+
+
+\section{Data Analysis}
+
+\subsection{Analysis for Split Plot Design}
+The data was analyzed using a Split Plot Design with Tillage as the main plot factor and Organic Manure as the subplot factor. Replications were treated as random blocks.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[h]
+    \centering
+    \caption{ANOVA Table for Split-Plot Design}
+    \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Source of Variation} & \textbf{df} & \textbf{Sum of Squares (SS)} & \textbf{Mean Square (MS)} & \textbf{F} \\
+        \midrule
+        \multicolumn{5}{l}{\textit{Whole-Plot Factors}} \\
+        Replications (Reps) & 2 & SS\textsubscript{Reps} & MS\textsubscript{Reps} & F\textsubscript{Reps} \\
+        Tillage (T) & 1 & SS\textsubscript{T} & MS\textsubscript{T} & F\textsubscript{T} \\
+        (Error WP) & 2 & SS\textsubscript{Reps$\times$T} & MS\textsubscript{Reps$\times$T} & --- \\
+        \midrule
+        \multicolumn{5}{l}{\textit{Sub-Plot Factors}} \\
+        Organic Manure (OM) & 3 & SS\textsubscript{OM} & MS\textsubscript{OM} & F\textsubscript{OM} \\
+        Tillage $\times$ OM & 3 & SS\textsubscript{T$\times$OM} & MS\textsubscript{T$\times$OM} & F\textsubscript{T$\times$OM} \\
+        Error (Residual) & 12 & SS\textsubscript{Error} & MS\textsubscript{Error} & --- \\
+        \midrule
+        Total & 23 & SS\textsubscript{Total} & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Univariate Analysis of Variance}
+
+\subsubsection*{Between-Subjects Factors}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{llr}
+\toprule
+\textbf{}        & \textbf{}                                     & \textbf{N} \\ \midrule
+\textbf{Rep}     & R1                                            & 8          \\
+                 & R2                                            & 8          \\
+                 & R3                                            & 8          \\ \midrule
+\textbf{Tillage} & Conventional                                  & 12         \\
+                 & Strip                                         & 12         \\ \midrule
+\textbf{Organic\_manure} & 40\% RDCF + 60\% RDCF from compost         & 6          \\
+                 & 60\% RDCF + 40\% RDCF from compost            & 6          \\
+                 & 80\% RDCF + 20\% RDCF from compost            & 6          \\
+                 & RDCF (Sole chemical)                          & 6          \\ \bottomrule
+\end{tabular}
+\caption{Between-Subjects Factors}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section*{Tests of Between-Subjects Effects}
+
+\noindent \textbf{Dependent Variable:} Yield
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Source} & \textbf{Type III Sum of Squares} & \textbf{df} & \textbf{Mean Square} & \textbf{F} & \textbf{Sig.} \\ \midrule
+Corrected Model      & 47.507\textsuperscript{a} & 11 & 4.319  & 11.620  & $<$ .001 \\
+Intercept            & 4094.310                  & 1  & 4094.310 & 11016.163 & $<$ .001 \\
+Rep                  & .504                      & 2  & .252    & .677    & .526    \\
+Tillage              & 2.288                     & 1  & 2.288   & 6.156   & .029    \\
+Error       & 7.984                     & 2  & 3.992   & 10.741  & .002    \\
+Organic\_manure      & 35.616                    & 3  & 11.872  & 31.943  & $<$ .001 \\
+Tillage * Organic\_manure & 1.116                & 3  & .372    & 1.001   & .426    \\
+Error                & 4.460                     & 12 & .372    &         &         \\
+Total                & 4146.277                  & 24 &         &         &         \\
+Corrected Total      & 51.967                    & 23 &         &         &         \\ \bottomrule
+\end{tabular}
+\caption{Tests of Between-Subjects Effects}
+\end{table}
+
+\noindent \textsuperscript{a} R Squared = .914 (Adjusted R Squared = .836)\\
+%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Tillage:}\\
+The main effect of Tillage is statistically significant (
+$F$=6.156, $p$=
+0.029), indicating that different tillage methods have a significant impact on yield.\\
+\textbf{Organic Manuare:}\\
+Organic Manure has a highly significant effect ( $F$=31.943, $p<$
+0.001), suggesting that different compositions of organic manure significantly influence the yield.\\
+\textbf{Interaction(Tillage*Organic Manure:)}\\
+The interaction between Tillage and Organic Manure is not statistically significant ($F=1.001, p= 0.426$), indicating that the effect of Organic Manure on yield is not significantly influenced by the type of Tillage.\\
+\textbf{Replication (Rep):}\\
+The Replication effect is not significant $(
+F=0.677,p=0.526)$, suggesting that yield differences across the replicates are minimal and do not contribute significantly to the variation in yield.\\
+\textbf{Summery:}The results suggest that Organic Manure and Tillage independently influence the yield significantly, while their interaction does not. The model is robust, as indicated by the high R Squared value, suggesting it effectively captures the variability in yield.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+% ANOVA Table
+\begin{table}[h]
+    \centering
+    \caption{Test Results}
+    \begin{tabular}{lccccc}
+    \toprule
+    \textbf{Source} & \textbf{Sum of Squares} & \textbf{df} & \textbf{Mean Square} & \textbf{F} & \textbf{Sig.} \\
+    \midrule
+        Contrast & 2.288 & 1 & 2.288 & 0.573 & 0.528 \\
+        Error (Rep * Tillage) & 7.984 & 2 & 3.992 & & \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+    \begin{center}
+        
+    
+    \caption{Multiple Comparisons}
+    \resizebox{\linewidth}{!}{ % Resize table to fit the width of the page
+    \begin{tabular}{llcccc}
+        \toprule
+        \textbf{(I) Organic Manure} & \textbf{(J) Organic Manure} & \textbf{Mean Difference (I-J)} & \textbf{Std. Error} & \textbf{Sig.} & \textbf{95\% Confidence Interval} \\
+        & & & & & \textbf{Lower Bound} \quad \textbf{Upper Bound} \\
+        \midrule
+        40\% RDCF + 60\% Compost & 60\% RDCF + 40\% Compost & 0.993$^{*}$ & 0.35198 & 0.015 & 0.2264 \quad 1.7602 \\
+        & 80\% RDCF + 20\% Compost & 1.905$^{*}$ & 0.35198 & 0.001 & 1.1381 \quad 2.6719 \\
+        & RDCF (Sole chemical) & 3.310$^{*}$ & 0.35198 & 0.001 & 2.5431 \quad 4.0769 \\
+        \midrule
+        60\% RDCF + 40\% Compost & 40\% RDCF + 60\% Compost & -0.993$^{*}$ & 0.35198 & 0.015 & -1.7602 \quad -0.2264 \\
+        & 80\% RDCF + 20\% Compost & 0.911$^{*}$ & 0.35198 & 0.024 & 0.1448 \quad 1.6786 \\
+        & RDCF (Sole chemical) & 2.316$^{*}$ & 0.35198 & 0.001 & 1.5498 \quad 3.0836 \\
+        \midrule
+        80\% RDCF + 20\% Compost & 40\% RDCF + 60\% Compost & -1.905$^{*}$ & 0.35198 & 0.001 & -2.6719 \quad -1.1381 \\
+        & 60\% RDCF + 40\% Compost & -0.911$^{*}$ & 0.35198 & 0.024 & -1.6786 \quad -0.1448 \\
+        & RDCF (Sole chemical) & 1.405$^{*}$ & 0.35198 & 0.002 & 0.6381 \quad 2.1719 \\
+        \midrule
+        RDCF (Sole chemical) & 40\% RDCF + 60\% Compost & -3.310$^{*}$ & 0.35198 & 0.001 & -4.0769 \quad -2.5431 \\
+        & 60\% RDCF + 40\% Compost & -2.316$^{*}$ & 0.35198 & 0.001 & -3.0836 \quad -1.5498 \\
+        & 80\% RDCF + 20\% Compost & -1.405$^{*}$ & 0.35198 & 0.002 & -2.1719 \quad -0.6381 \\
+        \bottomrule
+    \end{tabular}
+    } % End resizebox
+{ Mean difference is significant at the 0.05 level.}\\
+    \end{center}
+\\
+%%%%%%%%%%%%%%%%%%
+\textbf{Frome this table we can see;} \\
+\begin{itemize}
+    \item The comparison between \textbf{40\% RDCF + 60\% Compost} and \textbf{RDCF (Sole chemical)} shows a significant positive difference in yield \((3.310^{*}, p < 0.001)\), suggesting that the compost combination yields significantly more than the sole chemical fertilizer.
+    \item Similarly, the comparison between \textbf{60\% RDCF + 40\% Compost} and \textbf{RDCF (Sole chemical)} also demonstrates a significant positive difference \((2.316^{*}, p < 0.001)\), reinforcing that organic manure combinations outperform the sole chemical approach.
+\end{itemize}
+\textbf{Summery of Findings;}\\
+\begin{itemize}
+    \item Organic manure treatments consistently outperform the sole chemical fertilizer (RDCF) in terms of yield.
+    \item The higher proportion of organic compost (e.g., 40\% RDCF + 60\% Compost) shows better performance compared to lower compost content.
+    \item The results suggest that integrating higher compost ratios with RDCF significantly enhances yield compared to using chemical fertilizers alone.
+\end{itemize}
+
+
+
+
+
+\chapter{Conclusion and Recommendations}
+\section{Conclusion}
+The visit to the Bangladesh Agriculture and Research Institute (BARI) was an invaluable experience, offering a practical understanding of advanced agricultural research techniques. The use of statistical methods such as the Randomized Complete Block Design (RBD) and Split Plot Design underscored the importance of designing experiments for accurate and reliable results. Observations of cutting-edge innovations and laboratory work further highlighted BARI’s commitment to sustainable agricultural practices. This field trip significantly enhanced our theoretical knowledge and exposed us to real-world applications,fostering a deeper appreciation for the role of research in agriculture.\\
+The results suggest that Organic Manure and Tillage independently influence the yield significantly, while their interaction does not. The model is robust, as indicated by the high R Squared value, suggesting it effectively captures the variability in yield.\\
+Frome mulltiple comparisons of Organic Manure ,we can say that The results suggest that integrating higher compost ratios with RDCF significantly
+enhances yield compared to using chemical fertilizers alone.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Recommendations}
+Based on the insights gained from this visit, the following recommendations are proposed:
+\begin{enumerate}
+    \item \textbf{Enhancing Collaboration:} Greater collaboration between research institutions like BARI and local agricultural communities is essential. This will ensure the transfer of advanced techniques and innovations to farmers.
+    \item \textbf{Investment in Technology:} BARI should prioritize the use of modern technologies, such as remote sensing and GIS, to optimize agricultural productivity and monitor environmental impact effectively.
+    \item \textbf{Capacity Building:} More training sessions should be organized on the application of statistical designs (e.g., RBD and Split Plot Design). This will empower students, researchers, and professionals to conduct high-quality research.
+    \item \textbf{Focus on Sustainability:} Future research should investigate the long-term effects of integrating organic and chemical fertilizers to enhance crop yield while maintaining soil health.
+    \item \textbf{Field-to-Lab Integration:} Encourage more field-based experiments to bridge the gap between theoretical research and practical applications, thus addressing region-specific agricultural challenges.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+\begin{itemize}
+    \item Handouts provided during the visit.
+    \item BARI official website: \url{https://www.bari.gov.bd/}
+    \item M.R. Bhuiyan (2007): Fundamentals of Experimental Design,, 2nd Ed.
+    \item Montgomery, D.C. (2003): Design and Analysis of Experiments, 5th Ed, Wiley, N.Y.
+    \item Chat GPT:
+    \url{https://chatgpt.com/}
+    \item BARC official website
+    \url{https://barc.portal.gov.bd/}
+    \item BARI offical facebook page:
+    \url{https://www.facebook.com/BD.GOV.BARI}
+    \item Image collect from:
+    \url{https://geolearn.in/the-basic-concept-of-remote-sensing/amp/}
+    \item ORGANOGRAM collect from:
+    \url{https://bari.portal.gov.bd/}
+\end{itemize}
+
+
+\end{document}
+
+
