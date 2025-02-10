@@ -2,7 +2,7 @@
 📄 This repository contains my **LaTeX report** on our field trip to **Bangladesh Agriculture and Research Institute (BARI)**.
 
 ## 📌 Contents:
-- 📝 `report.tex` → LaTeX source file  
+- 📝 `"H:\Department\M.Sc\Project\Field Trip Report\main.tex"` → LaTeX source file  
 - 📄 `report.pdf` → Compiled version  
 - 📸 Images used in the report  
 - 🔧 References and bibliography  
