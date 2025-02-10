@@ -1,9 +1,6 @@
-# BARI Field Trip Report
-📄 This repository contains my **LaTeX report** on our field trip to **Bangladesh Agriculture and Research Institute (BARI)**.
-
 ## 📌 Contents:
-- 📝 `https://github.com/RabbiTheAnalyst/BARI-Field-Trip-Report/blob/main/main.tex` → LaTeX source file  
-- 📄 `report.pdf` → Compiled version  
+- 📝 [`report.tex`](https://github.com/RabbiTheAnalyst/BARI-Field-Trip-Report/blob/main/main.tex) → LaTeX source file  
+- 📄 [`report.pdf`]([https://github.com/your-username/your-repo-name/raw/main/report.pdf](https://github.com/RabbiTheAnalyst/BARI-Field-Trip-Report/blob/main/Final_Report_On_Md__Rabbi_Ali.pdf)) → Compiled version  
 - 📸 Images used in the report  
 - 🔧 References and bibliography  
 
@@ -12,3 +9,4 @@ We visited **BARI** to learn about **agricultural research, experimental design 
 
 ---
 🚀 Created by **Md Rabbi Ali** | 📧 rabbi.stat.iu@gmail.com
+
